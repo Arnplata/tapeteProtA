@@ -35,6 +35,8 @@ font-size: 27px;
 font-weight: 800;
         
 box-sizing: border-box;
+        
+transition: color .3s, background-color .3s;
 }
 
 .g-title{
