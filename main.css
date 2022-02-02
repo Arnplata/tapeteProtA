@@ -35,7 +35,7 @@ font-size: 27px;
 font-weight: 800;
         
 box-sizing: border-box;
-        
+
 transition: color .3s, background-color .3s;
 }
 
@@ -80,6 +80,7 @@ font-weight: 700;
 .tecla.i:hover{
     background-color: green;
     color: white;
+    
 
 }
 
@@ -122,4 +123,24 @@ color: blue;
 .izquierdo{
     
 color: green;
+}   
+
+.btn{
+    color: white;
+    background-color: #707070;
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+
+.btnCont{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.semCont{
+    margin-top: 1em;
 }
