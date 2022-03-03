@@ -62,7 +62,7 @@ font-size: 19px;
 font-weight: 700;
 }
 
-.tecla:hover{
+.tecla.f.active{
     background-color: red;
     color: white;
 }
@@ -77,17 +77,19 @@ font-weight: 700;
     color: blue;
 }
 
-.tecla.i:hover{
+.tecla.i.active{
     background-color: green;
     color: white;
     
 
 }
 
-.tecla.d:hover{
+.tecla.d.active{
     background-color: blue;
     color: white;
 }
+
+
 
 .instr{
 
