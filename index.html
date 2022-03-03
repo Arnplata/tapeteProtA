@@ -7,85 +7,211 @@
     <title>PrototipoPiano Tiles</title>
     <link href="main.css" rel="stylesheet">
     <script src="app.js"></script>
+    <script src="ejerciciosPrint.js"></script>
+    <script src="llaves.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="contGrilla">
 
+    <div class="landing">
+        
+        <!-- <div>
+            <h1>BÍTACORA PRE-ACTIVIDAD:</h1>
+            <P>Escala de medición de esfuerzo percibido durante
+                el calentamiento:</P>
+            
+            <div class="escalaEsfuerzo">
+                    <div class="renglonEsfuerzo">
+                        <div class="num">0.</div>
+                        <label for="0">Reposos</label>
+                        <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">1.</div>
+                        <label for="1">Muy muy ligero</label>
+                        <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">2.</div>
+                        <label for="2">Muy ligero</label>
+                        <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">3.</div>
+                        <label for="3">Ligero</label>
+                        <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">4.</div>
+                        <label for="4">Algo pesado</label>
+                        <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">5.</div>
+                        <label for="5">Pesado</label>
+                        <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">6.</div>
+                        <label for="6">Más pesado</label>
+                        <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">7.</div>
+                        <label for="7">Muy pesado</label>
+                        <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">8.</div>
+                        <label for="8">Muy muy pesado</label>
+                        <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">9.</div>
+                        <label for="9">Máximo</label>
+                        <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo">
+                    </div>
+
+                    <div class="renglonEsfuerzo">
+                        <div class="num">10.</div>
+                        <label for="10">Extremo</label>
+                        <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo">
+                    </div>
+                    
+            </div>
+
+            <p>Escala de medición del estado de animo del
+                paciente después del calentamiento:</p>
+            
+            <div class="contEscalaCaras">
+                <div class="escalaCaras"></div>
+                <div class="caras">
+                    <div class="cara">
+                        <label for="cara1"></label>
+                        <input type="radio" id="cara1" name="caras" value="1">
+                    </div>
+
+                    <div class="cara">
+                        <label for="cara2"></label>
+                        <input type="radio" id="cara2" name="caras" value="1">
+                    </div>
+
+                    <div class="cara">
+                        <label for="cara3"></label>
+                        <input type="radio" id="cara3" name="caras" value="1">
+                    </div>
+
+                    <div class="cara">
+                        <label for="cara4"></label>
+                        <input type="radio" id="cara4" name="caras" value="1">
+                    </div>
+
+                    <div class="cara">
+                        <label for="cara5"></label>
+                        <input type="radio" id="cara5" name="caras" value="1">
+                    </div>
+
+                </div>
+            </div>
+            
+            
+                
+            <div class="btnera">
+                <div class="btnLand">SIGUIENTE</div>
+            </div>
+        </div> -->
+        
+        
+
+        
+
+
+    </div>
+    <div id="contGrilla">
         <div class="fila">
-        <div class="g-title">E1-1</div>
-    
-    </div>
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla i" onclick="b(2)">2</div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla d" onclick="b(1)">1</div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla i" onclick="b(2)">2</div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla d" onclick="b(1)">1</div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla i" onclick="b(2)">2</div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla d" onclick="b(1)">1</div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla i" onclick="b(2)">2</div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla d" onclick="b(1)">1</div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla i" onclick="b(2)">2</div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
-    
-    <div class="fila">
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla" onclick="b(0)"></div>
-        <div class="tecla d" onclick="b(1)">1</div>
-        <div class="tecla" onclick="b(0)"></div>
-    </div>
+            <div class="g-title">E1-1</div>
+        
+        </div>
+        <div class="fila">
+            <div id="J1" class="tecla f" onclick="b('J1')"></div>
+            <div id="J2" class="tecla i" onclick="b('J2')">2</div>
+            <div id="J3" class="tecla f" onclick="b('J3')"></div>
+            <div id="J4" class="tecla f" onclick="b('J4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="I1" class="tecla f" onclick="b('I1')"></div>
+            <div id="I2" class="tecla f" onclick="b('I2')"></div>
+            <div id="I3" class="tecla d" onclick="b('I3')">1</div>
+            <div id="I4" class="tecla f" onclick="b('I4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="H1" class="tecla f" onclick="b('H1')"></div>
+            <div id="H2" class="tecla i" onclick="b('H2')">2</div>
+            <div id="H3" class="tecla f" onclick="b('H3')"></div>
+            <div id="H4" class="tecla f" onclick="b('H4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="G1" class="tecla f" onclick="b('G1')"></div>
+            <div id="G2" class="tecla f" onclick="b('G2')"></div>
+            <div id="G3" class="tecla d" onclick="b('G3')">1</div>
+            <div id="G4" class="tecla f" onclick="b('G4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="F1" class="tecla f" onclick="b('F1')"></div>
+            <div id="F2" class="tecla i" onclick="b('F2')">2</div>
+            <div id="F3" class="tecla f" onclick="b('F3')"></div>
+            <div id="F4" class="tecla f" onclick="b('F4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="E1" class="tecla f" onclick="b('E1')"></div>
+            <div id="E2" class="tecla f" onclick="b('E2')"></div>
+            <div id="E3" class="tecla d" onclick="b('E3')">1</div>
+            <div id="E4" class="tecla f" onclick="b('E4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="D1" class="tecla f" onclick="b('D1')"></div>
+            <div id="D2" class="tecla i" onclick="b('D2')">2</div>
+            <div id="D3" class="tecla f" onclick="b('D3')"></div>
+            <div id="D4" class="tecla f" onclick="b('D4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="C1" class="tecla f" onclick="b('C1')"></div>
+            <div id="C2" class="tecla f" onclick="b('C2')"></div>
+            <div id="C3" class="tecla d" onclick="b('C3')">1</div>
+            <div id="C4" class="tecla f" onclick="b('C4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="B1" class="tecla f" onclick="b('B1')"></div>
+            <div id="B2" class="tecla i" onclick="b('B2')">2</div>
+            <div id="B3" class="tecla f" onclick="b('B3')"></div>
+            <div id="B4" class="tecla f" onclick="b('B4')"></div>
+        </div>
+        
+        <div class="fila">
+            <div id="A1" class="tecla f" onclick="b('A1')"></div>
+            <div id="A2" class="tecla f" onclick="b('A2')"></div>
+            <div id="A3" class="tecla d" onclick="b('A3')">1</div>
+            <div id="A4" class="tecla f" onclick="b('A4')"></div>
+        </div>
+  
         
     </div>
 
@@ -97,20 +223,32 @@
             <div class="izquierdo">Pie Izquierdo</div>
             <div class="derecho">Pie Derecho</div>
         </div>
+        <div class="subContInst">
+            <div id="dia1">Lunes</div>
+            <div >3 Vueltas</div>
+        </div>
+        <div class="subContInst">
+            <div id="dia2">Miércoles</div>
+            <div >3 Vueltas</div>
+        </div>
+        <div class="subContInst">
+            <div id="dia3">Viernes</div>
+            <div >3 Vueltas</div>
+        </div>
     </div>
 
     <div class="semCont">
             Semana 1
         <div class="btnCont">
-            <div class="btn" onclick="printTab(semana1,0,1)">E1-1</div>
-            <div class="btn" onclick="printTab(semana1,1,0)">E1-2</div>
-            <div class="btn" onclick="printTab(semana1,2,1)">E1-3</div>
+            <div class="btn" onclick="printEjer(printE1_1)">E1-1</div>
+            <div class="btn" onclick="printEjer(printE1_2)">E1-2</div>
+            <div class="btn" onclick="printEjer(printE1_3)">E1-3</div>
         </div>
 
         <div class="btnCont">
-            <div class="btn" onclick="printTab(semana1,3,0)">E1-4</div>
-            <div class="btn" onclick="printTab(semana1,4,1)">E1-5</div>
-            <div class="btn" onclick="printTab(semana1,5,0)">E1-6</div>
+            <div class="btn" onclick="printEjer(printE1_4)">E1-4</div>
+            <div class="btn" onclick="printEjer(printE1_5)">E1-5</div>
+            <div class="btn" onclick="printEjer(printE1_6)">E1-6</div>
         </div>
     </div>
 
@@ -118,16 +256,16 @@
         Semana 2
 
         <div class="btnCont">
-            <div class="btn" onclick="printTab(semana2,0,1)">E1-7</div>
-            <div class="btn" onclick="printTab(semana2,1,0)">E1-8</div>
-            <div class="btn" onclick="printTab(semana2,2,1)">E2-1</div>
-            <div class="btn" onclick="printTab(semana2,3,0)">E2-2</div>
+            <div class="btn" onclick="printEjer(printE1_7)">E1-7</div>
+            <div class="btn" onclick="printEjer(printE1_8)">E1-8</div>
+            <div class="btn" onclick="printEjer(printE2_1)">E2-1</div>
+            <div class="btn" onclick="printEjer(printE2_2)">E2-2</div>
         </div>
         <div class="btnCont">
-            <div class="btn" onclick="printTab(semana2,4,1)">E2-3</div>
-            <div class="btn" onclick="printTab(semana2,5,0)">E2-4</div>
-            <div class="btn" onclick="printTab(semana2,6,1)">E2-5</div>
-            <div class="btn" onclick="printTab(semana2,7,1)">E2-6</div>
+            <div class="btn" onclick="printEjer(printE2_3)">E2-3</div>
+            <div class="btn" onclick="printEjer(printE2_4)">E2-4</div>
+            <div class="btn" onclick="printEjer(printE2_5)">E2-5</div>
+            <div class="btn" onclick="printEjer(printE2_6)">E2-6</div>
         </div>
     </div>
 
@@ -135,16 +273,16 @@
         Semana 3
 
         <div class="btnCont">
-            <div class="btn" onclick="printTab(semana3,0,1)">E1-3</div>
-            <div class="btn" onclick="printTab(semana3,1,0)">E1-4</div>
-            <div class="btn" onclick="printTab(semana3,2,1)">E2-7</div>
-            <div class="btn" onclick="printTab(semana3,3,0)">E2-8</div>
+            <div class="btn" onclick="printEjer(printE1_3)">E1-3</div>
+            <div class="btn" onclick="printEjer(printE1_4)">E1-4</div>
+            <div class="btn" onclick="printEjer(printE2_7)">E2-7</div>
+            <div class="btn" onclick="printEjer(printE2_8)">E2-8</div>
         </div>
         <div class="btnCont">
-            <div class="btn" onclick="printTab(semana3,4,1)">E2-1</div>
-            <div class="btn" onclick="printTab(semana3,5,0)">E2-2</div>
-            <div class="btn" onclick="printTab(semana3,6,1)">E2-19</div>
-            <div class="btn" onclick="printTab(semana3,7,0)">E2-20</div>
+            <div class="btn" onclick="printEjer(printE2_1)">E2-1</div>
+            <div class="btn" onclick="printEjer(printE2_2)">E2-2</div>
+            <div class="btn" onclick="printEjer(printE2_19)">E2-19</div>
+            <div class="btn" onclick="printEjer(printE2_20)">E2-20</div>
         </div>
     </div>
 
@@ -152,16 +290,16 @@
         Semana 4
 
         <div class="btnCont">
-            <div class="btn" onclick="printTab(semana3,0,1)">E1-3</div>
-            <div class="btn" onclick="printTab(semana3,1,0)">E1-4</div>
-            <div class="btn" onclick="printTab(semana3,2,1)">E2-7</div>
-            <div class="btn" onclick="printTab(semana3,3,0)">E2-8</div>
+            <div class="btn" onclick="printEjer(printE1_3)">E1-3</div>
+            <div class="btn" onclick="printEjer(printE1_4)">E1-4</div>
+            <div class="btn" onclick="printEjer(printE2_7)">E2-7</div>
+            <div class="btn" onclick="printEjer(printE2_8)">E2-8</div>
         </div>
         <div class="btnCont">
-            <div class="btn" onclick="printTab(semana3,4,1)">E2-1</div>
-            <div class="btn" onclick="printTab(semana3,5,0)">E2-2</div>
-            <div class="btn" onclick="printTab(semana3,6,1)">E2-19</div>
-            <div class="btn" onclick="printTab(semana3,7,0)">E2-20</div>
+            <div class="btn" onclick="printEjer(printE2_1)">E2-1</div>
+            <div class="btn" onclick="printEjer(printE2_2)">E2-2</div>
+            <div class="btn" onclick="printEjer(printE2_19)">E2-19</div>
+            <div class="btn" onclick="printEjer(printE2_20)">E2-20</div>
         </div>
     </div>
         
