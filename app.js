@@ -1,8 +1,11 @@
 
 
+
 const teclas = document.getElementsByClassName("tecla");
 
+var fecha = new Date().toLocaleDateString();
 
+var num = new Date().getDay();
 
 function b(id) {
     let tecla = document.getElementById(`${id}`);
@@ -47,6 +50,7 @@ function filtro(fila, columna){
 
 }
 
+
 function printEjer(ejercicio){
 
     limpiarPrint();
@@ -84,7 +88,64 @@ function printEjer(ejercicio){
 
 }
 
+function manejadorInterruptor(pie){
+    let pieLabel = document.getElementById('inicio');
+    if (pie =='pie izquierdo') {
+        document.getElementById('btnPieInicio').classList.remove('der');
+        pieLabel.classList.remove('b');
+        pieLabel.classList.add('g');
+        pieLabel.innerHTML=pie;
+    } else {
+        document.getElementById('btnPieInicio').classList.add('der');
+        pieLabel.classList.remove('g');
+        pieLabel.classList.add('b');
+        pieLabel.innerHTML=pie;
+    }
+}
 
+function cambiarEjer(ejerDerecho,ejerIzquierdo,tipo){
+
+    let botonBox = document.getElementById('pInicioBx');
+    let titulo = document.getElementById('titulo');
+    if (tipo.charAt(0)=='E') {
+        botonBox.innerHTML= `
+        <div class="inicio-t der" id="btnPieInicio" onclick="cambiarEjer(${ejerDerecho[11]},${ejerIzquierdo[11]},'btn')">
+            <div class="boton"></div>
+        </div>
+        `;
+        printEjer(ejerDerecho); 
+        manejadorInterruptor(ejerDerecho[10])
+        titulo.innerHTML= tipo ;
+        cambiarBtnDemo(ejerDerecho);
+    } else {
+        
+        botonBox.innerHTML= `
+        <div class="inicio-t der" id="btnPieInicio" onclick="cambiarEjer(${ejerIzquierdo[11]},${ejerDerecho[11]},'btn')">
+            <div class="boton"></div>
+        </div>
+        `;
+        manejadorInterruptor(ejerIzquierdo[10]);
+        printEjer(ejerIzquierdo);
+        cambiarBtnDemo(ejerIzquierdo);
+
+    }    
+
+    
+    
+}
+
+function cambiarBtnDemo(e){
+    var demoCont = document.getElementById('demoCont');
+    var btnDemo = `
+    <div class="btnDemostracion " onclick="runDemo(${e[11]},800)">
+            <div class="btnLabel">DEMOSTRACIÓN</div>
+            <div class="triangulo"></div>
+        </div>
+    `;
+
+    demoCont.innerHTML = btnDemo;
+
+}
 
 function waitforme(milisec) {
     return new Promise(resolve => {
@@ -92,7 +153,8 @@ function waitforme(milisec) {
     })
 }
   
-async function runDemo(ejercicio,velocidad) {
+async function runDemo(e,velocidad) {
+    let ejercicio = e[12]
     for (let i = 0; i < ejercicio.length; ++i) {
         await waitforme(`${velocidad}`);
         b(ejercicio[i]);
@@ -115,221 +177,39 @@ function limpiarActive(){
 
 function moverseccion(sec){
     var mainCont = document.getElementById("mainCont")
-    switch (sec) {
-        case 'introduccion':
-            mainCont.innerHTML = introduccion
-            break;
 
-        case 'instrucciones':
-            mainCont.innerHTML = instrucciones
-            break;
 
-        case 'bitacoraPre':
-            mainCont.innerHTML = bitacoraPre
-            break;
+    if (sec == tapeteFisico) {
+        mainCont.innerHTML = sec
         
-        case 'tapeteFisico':
-            mainCont.innerHTML = tapeteFisico
-            break;
-
-        case 'bitacoraPost':
-            mainCont.innerHTML = bitacoraPost
-            break;
+        tapeteLoad();
+        cambiarEjer(E1_1,E1_2,'Ejercicio 1');
         
       
+
+        
+    } else {
+        mainCont.innerHTML = sec
+        
     }
 }
 
 
+function tapeteLoad(){
+    
 
-// var landing = `
-// <div>
-//             <h1>TAPETE CUADRICULADO</h1>
-//             <p>El tapete cuadriculado es un invento japonés
-//             realizado por los doctores Shiguematzu y Okura,
-//             con el propósito de disminuir el riesgo de caídas 
-//             y prevenir síndrome demencial en los 
-//             adultos mayores.
-//             La diabetes Melitus es un factor de riesgo para
-//             la demencia, por ello a las personas con ésta
-//             enfermedad se les recomienda hacer ejercicio
-//             físico y combinarlos con ejercicio mental
-//             simultáneamente.</p>
-//         </div>
-//         <div class="beneficios">
+    var dia = (
+        num == 0 ? 'Domingo' :
+        num == 1 ? 'Lunes' :
+        num == 2 ? 'Martes' :
+        num == 3 ? 'Miércoles' :
+        num == 4 ? 'Jueves' :
+        num == 5 ? 'Viernes' :
+        num == 6 ? 'Sábado' :"" );
 
-//         </div>
+    document.getElementById("diaPalabra").innerHTML= dia;
+    document.getElementById("diaNumero").innerHTML= fecha;
 
-//         <div class="meta">
-//             <h2>¡LA META!</h2>
-//             <P>40 MINUTOS, 3 VECES A LA SEMANA DURANTE 6 MESES CONTINUOS</P>
-//         </div>
+}
 
-//         <div class="btnera">
-//             <div class="btnLand">TAPETE FÍSICO</div>
-//             <div class="btnLand">TAPETE VIRTUAL</div>
-//         </div>
 
-// `;
-
-// var tapeteFisico = [
-//    //Instrucciones
-//     `
-//     <div>
-//             <h1>INSTRUCCIONES</h1>
-//             <h3>Paso 1</h3>
-//             <p>En una superficie plana, dibuje un tapete
-//                 cuadriculado como se muestra en la figura</p>
-//             <div class="tapeteEjemplo"></div>
-            
-            
-//             <h3>Paso 2</h3>
-//             <p>Una vez que ya cuente con el tapete cuadriculado,
-//                 podrá iniciar la siguiente rutina:</p>
-//             <h4>A&#41;Calentamiento:</h4>
-//             <p>Iniciar con un calentamiento de marcha "indoor"
-//                 por 15 minutos. Apóyese del siguiente video:</p>
-//             <div class="videoYT"></div>
-
-//             <h4>B&#41;Tapete cuadriculado:</h4>
-//             <p>Es importante seguir el plan de acción por 20
-//                 minutos tal como lo indica el ejercicio.</p>
-
-//             <h4>C&#41;Enfriamiento:</h4>
-//             <p>Al terminar la actividad, deberá realizar un
-//                 enfriamiento por 5 minutos, este puede ser una
-//                 ligera caminata alrededor del tapete.</p>
-                
-//             <div class="btnera">
-//                 <div class="btnLand">COMENZAR</div>
-//             </div>
-//         </div>
-//     `,
-//     //Bitácora Pre-actividad
-//     `
-//     <div>
-//             <h1>BÍTACORA PRE-ACTIVIDAD:</h1>
-//             <P>Escala de medición de esfuerzo percibido durante
-//                 el calentamiento:</P>
-            
-//             <div class="escalaEsfuerzo">
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">0.</div>
-//                         <label for="0">Reposos</label>
-//                         <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">1.</div>
-//                         <label for="1">Muy muy ligero</label>
-//                         <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">2.</div>
-//                         <label for="2">Muy ligero</label>
-//                         <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">3.</div>
-//                         <label for="3">Ligero</label>
-//                         <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">4.</div>
-//                         <label for="4">Algo pesado</label>
-//                         <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">5.</div>
-//                         <label for="5">Pesado</label>
-//                         <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">6.</div>
-//                         <label for="6">Más pesado</label>
-//                         <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">7.</div>
-//                         <label for="7">Muy pesado</label>
-//                         <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">8.</div>
-//                         <label for="8">Muy muy pesado</label>
-//                         <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">9.</div>
-//                         <label for="9">Máximo</label>
-//                         <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo">
-//                     </div>
-
-//                     <div class="renglonEsfuerzo">
-//                         <div class="num">10.</div>
-//                         <label for="10">Extremo</label>
-//                         <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo">
-//                     </div>
-                    
-//             </div>
-
-//             <p>Escala de medición del estado de animo del
-//                 paciente después del calentamiento:</p>
-            
-//             <div class="contEscalaCaras">
-//                 <div class="escalaCaras"></div>
-//                 <div class="caras">
-//                     <div class="cara">
-//                         <label for="cara1"></label>
-//                         <input type="radio" id="cara1" name="caras" value="1">
-//                     </div>
-
-//                     <div class="cara">
-//                         <label for="cara2"></label>
-//                         <input type="radio" id="cara2" name="caras" value="1">
-//                     </div>
-
-//                     <div class="cara">
-//                         <label for="cara3"></label>
-//                         <input type="radio" id="cara3" name="caras" value="1">
-//                     </div>
-
-//                     <div class="cara">
-//                         <label for="cara4"></label>
-//                         <input type="radio" id="cara4" name="caras" value="1">
-//                     </div>
-
-//                     <div class="cara">
-//                         <label for="cara5"></label>
-//                         <input type="radio" id="cara5" name="caras" value="1">
-//                     </div>
-
-//                 </div>
-//             </div>
-            
-            
-                
-//             <div class="btnera">
-//                 <div class="btnLand">SIGUIENTE</div>
-//             </div>
-//     `,
-
-//     //Ejercicios
-
-//     `
-//     `,
-
-//     //Bitacora Post-actividad   
-
-//     `
-//     `
-
-// ]
