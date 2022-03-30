@@ -1,13 +1,5 @@
 
-
-
-
-
-
-
-
-
-const printE1_1 = [
+const E1_1 = [
     [0,"2i",0,0],
     [0,0,"1d",0],
     [0,"2i",0,0],
@@ -18,14 +10,14 @@ const printE1_1 = [
     [0,0,"1d",0],
     [0,"2i",0,0],
     [0,0,"1d",0],
-    ["Lunes", "3 vueltas"],
-    ["Míercoles", "3 vueltas"],
-    ["Viernes", "3 vueltas"],
-    ["Pie Derecho"]
+    ["pie derecho"],
+    'E1_1',
+    ['A3','B2','C3','D2','E3','F2','G3','H2','I3','J2',]
+ 
 
 ];
 
-const printE1_2 = [
+const E1_2 = [
     [0,0,"2d",0],
     [0,"1i",0,0],
     [0,0,"2d",0],
@@ -36,14 +28,13 @@ const printE1_2 = [
     [0,"1i",0,0],
     [0,0,"2d",0],
     [0,"1i",0,0],
-    ["Lunes", "4 vueltas"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Izquierdo"]
+    ["pie izquierdo"],
+    'E1_2',
+    ['A2','B3','C2','D3','E2','F3','G2','H3','I2','J3',]
 
 ];
 
-const printE1_3 = [
+const E1_3 = [
     [0,"2i","1d",0],
     [0,"2i","1d",0],
     [0,"2i","1d",0],
@@ -54,14 +45,13 @@ const printE1_3 = [
     [0,"2i","1d",0],
     [0,"2i","1d",0],
     [0,"2i","1d",0],
-    ["Lunes", "4 vueltas"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Derecho"]
+    ["pie derecho"],
+    'E1_3',
+    ['A3','A2','B3','B2','C3','C2','D3','D2','E3','E2','F3','F2','G3','G2','H3','H2','I3','I2','J3','J2']
 
 ];
 
-const printE1_4 = [
+const E1_4 = [
     [0,"1i","2d",0],
     [0,"1i","2d",0],
     [0,"1i","2d",0],
@@ -72,32 +62,29 @@ const printE1_4 = [
     [0,"1i","2d",0],
     [0,"1i","2d",0],
     [0,"1i","2d",0],
-    ["Lunes", "4 vueltas"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Izquierdo"]
+    ["pie izquierdo"],
+    'E1_4',
+    ['A2','A3','B2','B3','C2','C3','D2','D3','E2','E3','F2','F3','G2','G3','H2','H3','I2','I3','J2','J3']
+];
+
+const E1_5 = [
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    [0,"2i",0,"1d"],
+    ["pie derecho"],
+    'E1_5',
+    ['A4','A2','B4','B2','C4','C2','D4','D2','E4','E2','F4','F2','G4','G2','H4','H2','I4','I2','J4','J2']
 
 ];
 
-const printE1_5 = [
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    [0,"2i",0,"1d"],
-    ["Lunes", "No Aplica"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Derecho"]
-
-];
-
-const printE1_6 = [
+const E1_6 = [
     ["1i",0,"2d",0],
     ["1i",0,"2d",0],
     ["1i",0,"2d",0],
@@ -108,15 +95,13 @@ const printE1_6 = [
     ["1i",0,"2d",0],
     ["1i",0,"2d",0],
     ["1i",0,"2d",0],
-    ["Lunes", "No Aplica"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Izquierdo"]
-
+    ["pie izquierdo"],
+    'E1_6',
+    ['A1','A3','B1','B3','C1','C3','D1','D3','E1','E3','F1','F3','G1','G3','H1','H3','I1','I3','J1','J3']
 ];
 
 
-const printE1_7 = [
+const E1_7 = [
     [0,"2i","1d",0],
     [0,"2i","1d",0],
     [0,"2i","1d",0],
@@ -127,14 +112,13 @@ const printE1_7 = [
     [0,"2i","1d",0],
     [0,"2i","1d",0],
     [0,"2i","1d",0],
-    ["Lunes", "3 vueltas"],
-    ["Míercoles", "3 vueltas"],
-    ["Viernes", "3 vueltas"],
-    ["Pie Derecho"]
+    ["pie derecho"],
+    'E1_7',
+    ['A3','A2','B3','B2','C3','C2','D3','D2','E3','E2','F3','F2','G3','G2','H3','H2','I3','I2','J3','J2']
 
 ];
 
-const printE1_8 = [
+const E1_8 = [
     [0,"1i","2d",0],
     [0,"1i","2d",0],
     [0,"1i","2d",0],
@@ -145,14 +129,13 @@ const printE1_8 = [
     [0,"1i","2d",0],
     [0,"1i","2d",0],
     [0,"1i","2d",0],
-    ["Lunes", "3 vueltas"],
-    ["Míercoles", "3 vueltas"],
-    ["Viernes", "3 vueltas"],
-    ["Pie Izquierdo"]
+    ["pie izquierdo"],
+    'E1_8',
+    ['A2','A3','B2','B3','C2','C3','D2','D3','E2','E3','F2','F3','G2','G3','H2','H3','I2','I3','J2','J3']
 
 ];
 
-const printE2_1 = [
+const E2_1 = [
     ["4i","2i","1d","3d"],
     ["4i","2i","1d","3d"],
     ["4i","2i","1d","3d"],
@@ -163,14 +146,22 @@ const printE2_1 = [
     ["4i","2i","1d","3d"],
     ["4i","2i","1d","3d"],
     ["4i","2i","1d","3d"],
-    ["Lunes", "4 vueltas"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Derecho"]
+    ["pie derecho"],
+    'E2_1',
+    ['A3','A2','A4','A1',
+     'B3','B2','B4','B1',
+     'C3','C2','C4','C1',
+     'D3','D2','D4','D1',
+     'E3','E2','E4','E1',
+     'F3','F2','F4','F1',
+     'G3','G2','G4','G1',
+     'H3','H2','H4','H1',
+     'I3','I2','I4','I1',
+     'J3','J2','J4','J1',]
 
 ];
 
-const printE2_2 = [
+const E2_2 = [
     ["3i","1i","2d","4d"],
     ["3i","1i","2d","4d"],
     ["3i","1i","2d","4d"],
@@ -181,14 +172,21 @@ const printE2_2 = [
     ["3i","1i","2d","4d"],
     ["3i","1i","2d","4d"],
     ["3i","1i","2d","4d"],
-    ["Lunes", "4 vueltas"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Izquierdo"]
-
+    ["pie izquierdo"],
+    'E2_2',
+    ['A2','A3','A1','A4',
+     'B2','B3','B1','B4',
+     'C2','C3','C1','C4',
+     'D2','D3','D1','D4',
+     'E2','E3','E1','E4',
+     'F2','F3','F1','F4',
+     'G2','G3','G1','G4',
+     'H2','H3','H1','H4',
+     'I2','I3','I1','I4',
+     'J2','J3','J1','J4',]
 ];
 
-const printE2_3 = [
+const E2_3 = [
     ["2i","4i","3d","1d"],
     ["2i","4i","3d","1d"],
     ["2i","4i","3d","1d"],
@@ -200,13 +198,22 @@ const printE2_3 = [
     ["2i","4i","3d","1d"],
     ["2i","4i","3d","1d"],
     ["Lunes", "No Aplica"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Derecho"]
+    ["pie derecho"],
+    'E2_3',
+    ['A4','A1','A3','A2',
+     'B4','B1','B3','B2',
+     'C4','C1','C3','C2',
+     'D4','D1','D3','D2',
+     'E4','E1','E3','E2',
+     'F4','F1','F3','F2',
+     'G4','G1','G3','G2',
+     'H4','H1','H3','H2',
+     'I4','I1','I3','I2',
+     'J4','J1','J3','J2',]
 
 ];
 
-const printE2_4 = [
+const E2_4 = [
     ["1i","3i","4d","2d"],
     ["1i","3i","4d","2d"],
     ["1i","3i","4d","2d"],
@@ -218,13 +225,22 @@ const printE2_4 = [
     ["1i","3i","4d","2d"],
     ["1i","3i","4d","2d"],
     ["Lunes", "No Aplica"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Izquierdo"]
+    ["pie izquierdo"],
+    'E2_4',
+    ['A1','A4','A2','A3',
+     'B1','B4','B2','B3',
+     'C1','C4','C2','C3',
+     'D1','D4','D2','D3',
+     'E1','E4','E2','E3',
+     'F1','F4','F2','F3',
+     'G1','G4','G2','G3',
+     'H1','H4','H2','H3',
+     'I1','I4','I2','I3',
+     'J1','J4','J2','J3',]
 
 ];
 
-const printE2_5 = [
+const E2_5 = [
     ["4i",0,0,"3d"],
     [0,"2i","1d",0],
     ["4i",0,0,"3d"],
@@ -235,14 +251,22 @@ const printE2_5 = [
     [0,"2i","1d",0],
     ["4i",0,0,"3d"],
     [0,"2i","1d",0],
-    ["Lunes", "No Aplica"],
-    ["Míercoles", "No Aplica"],
-    ["Viernes", "2 vueltas"],
-    ["Pie Derecho"]
+    ["pie derecho"],
+    'E2_5',
+    ['A3','A2',
+     'B4','B1',
+     'C3','C2',
+     'D4','D1',
+     'E3','E2',
+     'F4','F1',
+     'G3','G2',
+     'H4','H1',
+     'I3','I2',
+     'J4','J1',]
 
 ];
 
-const printE2_6 = [
+const E2_6 = [
     ["3i",0,0,"4d"],
     [0,"1i","2d",0],
     ["3i",0,0,"4d"],
@@ -253,16 +277,24 @@ const printE2_6 = [
     [0,"1i","2d",0],
     ["3i",0,0,"4d"],
     [0,"1i","2d",0],
-    ["Lunes", "No Aplica"],
-    ["Míercoles", "No Aplica"],
-    ["Viernes", "2 vueltas"],
-    ["Pie Izquierdo"]
+    ["pie izquierdo"],
+    'E2_6',
+    ['A2','A3',
+     'B1','B4',
+     'C2','C3',
+     'D1','D4',
+     'E2','E3',
+     'F1','F4',
+     'G2','G3',
+     'H1','H4',
+     'I2','I3',
+     'J1','J4',]
 
 ];
 
 
 
-const printE2_7 = [
+const E2_7 = [
     [0,0,"3d",0],
     [0,"2i",0,"1d"],
     [0,0,"6i",0],
@@ -273,14 +305,13 @@ const printE2_7 = [
     [0,"4i",0,"5d"],
     [0,0,"3d",0],
     [0,"2i",0,"1d"],
-    ["Lunes", "No Aplica"],
-    ["Míercoles", "No Aplica"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Derecho"]
+    ["pie derecho"],
+    'E2_7',
+    ['A2','B3','C2','D3','E2','F3','G2','H3','I2','J3',]
 
 ];
 
-const printE2_8 = [
+const E2_8 = [
     [0,"3i",0,0],
     ["1i",0,"2d",0],
     [0,"6d",0,0],
@@ -291,14 +322,13 @@ const printE2_8 = [
     ["5i",0,"4d",0],
     [0,"3i",0,0],
     ["1i",0,"2d",0],
-    ["Lunes", "No Aplica"],
-    ["Míercoles", "No Aplica"],
-    ["Viernes", "4 vueltas"],
-    ["Pie Izquierdo"]
+    ["pie izquierdo"],
+    'E2_8',
+    ['A2','B3','C2','D3','E2','F3','G2','H3','I2','J3',]
 
 ];
 
-const printE2_19 = [
+const E2_19 = [
     [0,"2i","3d",0],
     [0,0,"1d",0],
     [0,"6i","5d",0],
@@ -309,14 +339,13 @@ const printE2_19 = [
     [0,"4i",0,0],
     [0,"2i","3d",0],
     [0,0,"1d",0],
-    ["Lunes", "4 vueltas"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "2 vueltas"],
-    ["Pie Derecho"]
+    ["pie derecho"],
+    'E2_19',
+    ['A2','B3','C2','D3','E2','F3','G2','H3','I2','J3',]
 
 ];
 
-const printE2_20 = [
+const E2_20 = [
     [0,"3i","2d",0],
     [0,"1i",0,0],
     [0,"5i","6d",0],
@@ -327,9 +356,8 @@ const printE2_20 = [
     [0,0,"4d",0],
     [0,"3i","2d",0],
     [0,"1i",0,0],
-    ["Lunes", "4 vueltas"],
-    ["Míercoles", "4 vueltas"],
-    ["Viernes", "2 vueltas"],
-    ["Pie Izquierdo"]
+    ["pie izquierdo"],
+    'E2_20',
+    ['A2','B3','C2','D3','E2','F3','G2','H3','I2','J3',]
 
 ];
