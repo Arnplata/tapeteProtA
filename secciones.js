@@ -1,8 +1,69 @@
+
+  
+
+
 var introduccion = `
+<div class="introduccion">
+<h1>TAPETE CUADRICULADO:</h1>
+
+<p>El tapete cuadriculado es un invento japonés realizado por los doctores <strong>Shiguematzu y Okura</strong>, con el propósito de disminuir el riesgo de caídas y prevenir síndrome demencial en los adultos mayores.</p>
+<p>La diabetes Melitus es un factor de riesgo para la demencia, por ello a las personas con ésta enfermedad se les recomienda hacer ejercicio físico y combinarlos con ejercicio mental simultáneamente.</p>
+
+</div>
+
+<div class="rectanguloGris">
+    <div class="interno">
+        <div class="contTit">
+            <div class="beneTit"><h2>BENEFICIOS MENTALES O COGNITIVOS</h2></div>
+            <div class="beneTit"><h2>BENEFICIOS FÍSICOS</h2></div>
+        </div>
+
+        <div class="libre"></div>
+
+        <div class="contBene">
+
+            <div class="beneLista">
+
+                <ul>
+                    <li>Memoria</li>
+                    <li>Atención</li>
+                    <li>Lenguaje</li>
+                    <li>Función ejecutiva</li>
+                    <li>Concentración</li>
+                </ul>
+
+
+            </div>
+
+            <div class="beneLista">
+
+                <ul>
+                    <li>Mejora la cordinación del cuerpo.</li>
+                    <li>Mejora el equilibrio.</li>
+                    <li>Incrementa la fuerza de las piernas.</li>
+                    <li>Disminuye el riesgo de caidas.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="meta">
+    <h3>¡LA META!</h3>
+    <p>40 MINUTOS, 3 VECES A LA SEMANA DURANTE 6 MESES CONTINUOS</p>
+</div>
+
+<div class="botones">
+
+    <div class="boton" onclick="moverseccion(instruccionesPaso1)">COMENZAR</div>
+</div>
+</div>      
 
 `;
 
-var instrucciones = `
+// instruccionesPaso1
+var instruccionesPaso1 = `
 <div class="instrucciones">
 <div id="semana" class="header">
 Instrucciones
@@ -17,40 +78,178 @@ Instrucciones
                 <div class="imagenTapete"></div>
             </div>
             
-            <div class="pContInstr">
-                <p><strong>Paso 2</strong></p>
-                <P>Una vez que ya cuente con el tapete cuadriculado, podra iniciar la siguiente rutina:</P>
-            
-            </div>
-
-            <div class="pContInstr">
-                <p><strong>Calentamiento:</strong></p>
-                <p>Iniciar Con un calentamiento de marcha "indoor" por 15 minutos. Apóyese del siguiente video:</p>
-            
-            </div>
-
-            <div class="video">
-            <iframe class="videoFrame" src="https://www.youtube.com/embed/tW9IY48x1bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            
-            
-            <div class="pContInstr">
-                <p><strong>Tapete cuadriculado:</strong></p>
-                <p>Es importante seguir el plan de accion por 20 minutos como lo indica el ejercicio.</p>
-            
-            </div>
+           
 
             
             
             
             
             <div class="botones">
-                <div class="boton" onclick="moverseccion('bitacoraPre')">COMENZAR</div>
+                <div class="boton" onclick="moverseccion(bitacoraInicial)">SIGUIENTE</div>
             </div>
             </div>       
+`;  
+
+
+
+var bitacoraInicial = `
+<div class="bitacora">
+            <h1>BÍTACORA INICIAL:</h1>
+            <div class="pCont">
+                <p>Antes de comenzar, nos gustaría saber como se encuentra el día de hoy:
+                </p>
+            </div>
+            
+            <div class="escalaEsfuerzo">
+                    <div class="renglonEsfuerzo">
+                        <div class="num">0.</div>
+                        <label for="0">Reposos</label>
+                        <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">1.</div>
+                        <label for="1">Muy muy ligero</label>
+                        <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">2.</div>
+                        <label for="2">Muy ligero</label>
+                        <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">3.</div>
+                        <label for="3">Ligero</label>
+                        <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">4.</div>
+                        <label for="4">Algo pesado</label>
+                        <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">5.</div>
+                        <label for="5">Pesado</label>
+                        <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">6.</div>
+                        <label for="6">Más pesado</label>
+                        <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">7.</div>
+                        <label for="7">Muy pesado</label>
+                        <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">8.</div>
+                        <label for="8">Muy muy pesado</label>
+                        <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">9.</div>
+                        <label for="9">Máximo</label>
+                        <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo">
+                    </div>
+    
+                    <div class="renglonEsfuerzo">
+                        <div class="num">10.</div>
+                        <label for="10">Extremo</label>
+                        <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo">
+                    </div>
+                    
+            </div>
+    
+            <div class="pCont">
+                <p>Escala de medición del estado de ánimo del
+                    paciente <strong>antes de la actividad:</strong></p>
+            </div>
+            
+            <div class="contEscalaCaras">
+                
+                <div class="caras">
+                    <div class="caraBtnCont">
+                        <label class="cara1" for="cara1">
+                            <div class="cara cara1"></div>
+                        </label>
+                        <input type="radio" id="cara1" name="caras" value="1">
+                    </div>
+    
+                    <div class="caraBtnCont">
+                        <label for="cara2">
+                            <div class="cara cara2"></div>
+                        </label>
+                        <input type="radio" id="cara2" name="caras" value="1">
+                    </div>
+    
+                    <div class="caraBtnCont">
+                        <label for="cara3">
+                            <div class="cara cara3"></div>
+                        </label>
+                        <input type="radio" id="cara3" name="caras" value="1">
+                    </div>
+    
+                    <div class="caraBtnCont">
+                        <label for="cara4">
+                            <div class="cara cara4"></div>
+                        </label>
+                        <input type="radio" id="cara4" name="caras" value="1">
+                    </div>
+    
+                    <div class="caraBtnCont">
+                        <label for="cara5">
+                            <div class="cara cara5"></div>
+                        </label>
+                        <input type="radio" id="cara5" name="caras" value="1">
+                    </div>
+    
+                </div>
+            </div>
+            
+            
+                
+            <div class="botones">
+                        <div class="boton" onclick="moverseccion(calentamiento)">SIGUIENTE</div>
+            </div>
+        </div>
+    
 `;
 
-var bitacoraPre = `
+var calentamiento = `
+<div class="bitacora">
+<div id="semana" class="header">
+Instrucciones
+</div>
+    <h1>CALENTAMIENTO</h1>
+
+    <div class="pCont">
+                
+                <p>Iniciar Con un calentamiento de marcha "indoor" por 15 minutos. Apóyese del siguiente video:</p>
+            
+            </div>
+
+            <div class="video">
+            
+            </div>
+            
+    <div class="botones">
+        <div class="boton" onclick="moverseccion(bitacoraPreActividad)">SIGUIENTE</div>
+    </div>
+</div>
+`;
+
+// bitacoraPreActividad
+
+var bitacoraPreActividad = `
 <div class="bitacora">
 <h1>BÍTACORA PRE-ACTIVIDAD:</h1>
 
@@ -156,9 +355,21 @@ var bitacoraPre = `
 
     
 <div class="botones">
-    <div class="boton" onclick="moverseccion('tapeteFisico')">SIGUIENTE</div>
+    <div class="boton" onclick="moverseccion(indicacionesTapete)">SIGUIENTE</div>
 </div>
 </div>        
+`;
+
+var indicacionesTapete = `
+<div class="bitacora">
+<div id="semana" class="header">
+Instrucciones
+</div>
+<h1>INDICACIONES</h1>
+<div class="botones">
+    <div class="boton" onclick="moverseccion(tapeteFisico)">SIGUIENTE</div>
+</div>
+</div>
 `;
 
 var tapeteFisico = `
@@ -171,14 +382,14 @@ Semana 1
     Lunes
 </div>
 <div id="diaNumero">
-    14/03/22
+    00/0/0000
 </div>
 </div>
 
 <div class="tapContainer">
 <div id="contGrilla" class="tapeteFisico">
     <div class="fila">
-        <div class="g-title">E1-1</div>
+        <div class="g-title" id="titulo">E1-1</div>
 
     </div>
     <div class="fila">
@@ -253,7 +464,7 @@ Semana 1
 
 </div>
 
-<div class="acciones">
+<div class="acciones" onload="si()">
     
     <div class="vueltas">
         
@@ -263,11 +474,23 @@ Semana 1
 </div>
 
     <div class="inicio">
-        <div class="inicio-t">PIE DE INICIO</div>
-        <div id="inicio">Pie Derecho</div>
+
+        <div>PIE DE INICIO</div>
+
+        
+            <div id="pInicioBx">
+                <div class="inicio-t der" id="btnPieInicio">
+                    <div class="boton">
+            
+                    </div>
+                </div>
+            </div>
+        
+        
+        <div id="inicio" class="b">pie derecho</div>
     </div>
 
-    <div class="btnDemostracionCont">
+    <div class="btnDemostracionCont" id="demoCont">
         <div class="btnDemostracion " onclick="runDemo(E1_1,800)">
             <div class="btnLabel">DEMOSTRACIÓN</div>
             <div class="triangulo"></div>
@@ -287,17 +510,22 @@ Semana 1
 
     <div id="ejerciciosMenuCont">
 
-        <div class="btnEjercicio">Ejercicio 1</div>
-        <div class="btnEjercicio">Ejercicio 2</div>
-        <div class="btnEjercicio">Ejercicio 3</div>
+        <div class="btnEjercicio active" onclick="cambiarEjer(E1_1,E1_2,'Ejercicio 1')">Ejercicio 1</div>
+        <div class="btnEjercicio" onclick="cambiarEjer(E1_3,E1_4,'Ejercicio 2')">Ejercicio 2</div>
+        <div class="btnEjercicio" onclick="cambiarEjer(E1_5,E1_6,'Ejercicio 3')">Ejercicio 3</div>
 
     </div>
 
     <div class="btnFinalizarCont">
-        <div class="btnFinalizar" onclick="moverseccion('bitacoraPost')">FINALIZAR DÍA</div>
+        <div class="btnFinalizar" onclick="moverseccion(bitacoraPost)">FINALIZAR DÍA</div>
     </div>
 </div>
 </div>
+<div class="pContInstr">
+                <p><strong>Nota:</strong></p>
+                <p>Cada ejercicio se recorre 3 veces, empezando con el <strong>pie derecho</strong> y a continuación 3 veces empezando con el <strong>pie izquierdo</strong></p>
+            
+            </div>
 
 
 `;
@@ -424,6 +652,13 @@ var bitacoraPost = `
     
                 </div>
             </div>
+
+
+            <div class="pContInstr">
+                <p><strong>Enfriamiento:</strong></p>
+                <p>Al terminar la actividad, deberá realizar un enfriamiento por 5 minutos, <strong>éste puede ser una ligera caminata al rededor del tapete</strong></p>
+            
+            </div>
             
             
                 
@@ -432,7 +667,15 @@ var bitacoraPost = `
             </div>
         </div>
     
-`
+`;
+
+var resumen = `
+
+`;
+
+
+
+
 
 
 
@@ -440,15 +683,15 @@ var opcionesMenu = `
 <div class="semCont">
 Semana 1
 <div class="btnCont">
-<div class="btn" onclick="printEjer(printE1_1)">E1-1</div>
-<div class="btn" onclick="printEjer(printE1_2)">E1-2</div>
-<div class="btn" onclick="printEjer(printE1_3)">E1-3</div>
+<div class="btn" onclick="printEjer(E1_1)">E1-1</div>
+<div class="btn" onclick="printEjer(E1_2)">E1-2</div>
+<div class="btn" onclick="printEjer(E1_3)">E1-3</div>
 </div>
 
 <div class="btnCont">
-<div class="btn" onclick="printEjer(printE1_4)">E1-4</div>
-<div class="btn" onclick="printEjer(printE1_5)">E1-5</div>
-<div class="btn" onclick="printEjer(printE1_6)">E1-6</div>
+<div class="btn" onclick="printEjer(E1_4)">E1-4</div>
+<div class="btn" onclick="printEjer(E1_5)">E1-5</div>
+<div class="btn" onclick="printEjer(E1_6)">E1-6</div>
 </div>
 </div>
 
@@ -456,16 +699,16 @@ Semana 1
 Semana 2
 
 <div class="btnCont">
-<div class="btn" onclick="printEjer(printE1_7)">E1-7</div>
-<div class="btn" onclick="printEjer(printE1_8)">E1-8</div>
-<div class="btn" onclick="printEjer(printE2_1)">E2-1</div>
-<div class="btn" onclick="printEjer(printE2_2)">E2-2</div>
+<div class="btn" onclick="printEjer(E1_7)">E1-7</div>
+<div class="btn" onclick="printEjer(E1_8)">E1-8</div>
+<div class="btn" onclick="printEjer(E2_1)">E2-1</div>
+<div class="btn" onclick="printEjer(E2_2)">E2-2</div>
 </div>
 <div class="btnCont">
-<div class="btn" onclick="printEjer(printE2_3)">E2-3</div>
-<div class="btn" onclick="printEjer(printE2_4)">E2-4</div>
-<div class="btn" onclick="printEjer(printE2_5)">E2-5</div>
-<div class="btn" onclick="printEjer(printE2_6)">E2-6</div>
+<div class="btn" onclick="printEjer(E2_3)">E2-3</div>
+<div class="btn" onclick="printEjer(E2_4)">E2-4</div>
+<div class="btn" onclick="printEjer(E2_5)">E2-5</div>
+<div class="btn" onclick="printEjer(E2_6)">E2-6</div>
 </div>
 </div>
 
@@ -473,16 +716,16 @@ Semana 2
 Semana 3
 
 <div class="btnCont">
-<div class="btn" onclick="printEjer(printE1_3)">E1-3</div>
-<div class="btn" onclick="printEjer(printE1_4)">E1-4</div>
-<div class="btn" onclick="printEjer(printE2_7)">E2-7</div>
-<div class="btn" onclick="printEjer(printE2_8)">E2-8</div>
+<div class="btn" onclick="printEjer(E1_3)">E1-3</div>
+<div class="btn" onclick="printEjer(E1_4)">E1-4</div>
+<div class="btn" onclick="printEjer(E2_7)">E2-7</div>
+<div class="btn" onclick="printEjer(E2_8)">E2-8</div>
 </div>
 <div class="btnCont">
-<div class="btn" onclick="printEjer(printE2_1)">E2-1</div>
-<div class="btn" onclick="printEjer(printE2_2)">E2-2</div>
-<div class="btn" onclick="printEjer(printE2_19)">E2-19</div>
-<div class="btn" onclick="printEjer(printE2_20)">E2-20</div>
+<div class="btn" onclick="printEjer(E2_1)">E2-1</div>
+<div class="btn" onclick="printEjer(E2_2)">E2-2</div>
+<div class="btn" onclick="printEjer(E2_19)">E2-19</div>
+<div class="btn" onclick="printEjer(E2_20)">E2-20</div>
 </div>
 </div>
 
@@ -490,16 +733,16 @@ Semana 3
 Semana 4
 
 <div class="btnCont">
-<div class="btn" onclick="printEjer(printE1_3)">E1-3</div>
-<div class="btn" onclick="printEjer(printE1_4)">E1-4</div>
-<div class="btn" onclick="printEjer(printE2_7)">E2-7</div>
-<div class="btn" onclick="printEjer(printE2_8)">E2-8</div>
+<div class="btn" onclick="printEjer(E1_3)">E1-3</div>
+<div class="btn" onclick="printEjer(E1_4)">E1-4</div>
+<div class="btn" onclick="printEjer(E2_7)">E2-7</div>
+<div class="btn" onclick="printEjer(E2_8)">E2-8</div>
 </div>
 <div class="btnCont">
-<div class="btn" onclick="printEjer(printE2_1)">E2-1</div>
-<div class="btn" onclick="printEjer(printE2_2)">E2-2</div>
-<div class="btn" onclick="printEjer(printE2_19)">E2-19</div>
-<div class="btn" onclick="printEjer(printE2_20)">E2-20</div>
+<div class="btn" onclick="printEjer(E2_1)">E2-1</div>
+<div class="btn" onclick="printEjer(E2_2)">E2-2</div>
+<div class="btn" onclick="printEjer(E2_19)">E2-19</div>
+<div class="btn" onclick="printEjer(E2_20)">E2-20</div>
 </div>
 </div> -->
 `;
@@ -605,3 +848,5 @@ var tapeteVirtual = `
 
 </div>
 `;
+
+
