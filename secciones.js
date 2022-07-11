@@ -104,116 +104,72 @@ var bitacoraInicial = `
                     <div class="renglonEsfuerzo">
                         <div class="num">0.</div>
                         <label for="0">Reposos</label>
-                        <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos">
+                        <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos" onchange="modMetricas('esfuerzo1','0 - Reposo')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">1.</div>
                         <label for="1">Muy muy ligero</label>
-                        <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero">
+                        <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero" onchange="modMetricas('esfuerzo1','1 - Muy muy ligero')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">2.</div>
                         <label for="2">Muy ligero</label>
-                        <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero">
+                        <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero" onchange="modMetricas('esfuerzo1','2 - Muy ligero')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">3.</div>
                         <label for="3">Ligero</label>
-                        <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero">
+                        <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero" onchange="modMetricas('esfuerzo1','3 - Ligero')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">4.</div>
                         <label for="4">Algo pesado</label>
-                        <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado">
+                        <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado" onchange="modMetricas('esfuerzo1','4 - Algo pesado')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">5.</div>
                         <label for="5">Pesado</label>
-                        <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado">
+                        <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado" onchange="modMetricas('esfuerzo1','5 - Pesado')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">6.</div>
                         <label for="6">Más pesado</label>
-                        <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado">
+                        <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado" onchange="modMetricas('esfuerzo1','6 - Más pesado')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">7.</div>
                         <label for="7">Muy pesado</label>
-                        <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado">
+                        <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado" onchange="modMetricas('esfuerzo1','7 - Muy pesado')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">8.</div>
                         <label for="8">Muy muy pesado</label>
-                        <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado">
+                        <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado" onchange="modMetricas('esfuerzo1','8 - Muy muy pesado')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">9.</div>
                         <label for="9">Máximo</label>
-                        <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo">
+                        <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo" onchange="modMetricas('esfuerzo1','9 - Máximo')">
                     </div>
     
                     <div class="renglonEsfuerzo">
                         <div class="num">10.</div>
                         <label for="10">Extremo</label>
-                        <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo">
+                        <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo" onchange="modMetricas('esfuerzo1','10 - Extremo')">
                     </div>
                     
             </div>
-    
-            <div class="pCont">
-                <p>Escala de medición del estado de ánimo del
-                    paciente <strong>antes de la actividad:</strong></p>
-            </div>
             
-            <div class="contEscalaCaras">
-                
-                <div class="caras">
-                    <div class="caraBtnCont">
-                        <label class="cara1" for="cara1">
-                            <div class="cara cara1"></div>
-                        </label>
-                        <input type="radio" id="cara1" name="caras" value="1">
-                    </div>
-    
-                    <div class="caraBtnCont">
-                        <label for="cara2">
-                            <div class="cara cara2"></div>
-                        </label>
-                        <input type="radio" id="cara2" name="caras" value="1">
-                    </div>
-    
-                    <div class="caraBtnCont">
-                        <label for="cara3">
-                            <div class="cara cara3"></div>
-                        </label>
-                        <input type="radio" id="cara3" name="caras" value="1">
-                    </div>
-    
-                    <div class="caraBtnCont">
-                        <label for="cara4">
-                            <div class="cara cara4"></div>
-                        </label>
-                        <input type="radio" id="cara4" name="caras" value="1">
-                    </div>
-    
-                    <div class="caraBtnCont">
-                        <label for="cara5">
-                            <div class="cara cara5"></div>
-                        </label>
-                        <input type="radio" id="cara5" name="caras" value="1">
-                    </div>
-    
-                </div>
-            </div>
+            
             
             
                 
@@ -238,7 +194,7 @@ Instrucciones
             </div>
 
             <div class="video">
-            
+            <iframe width="319" height="180" src="https://www.youtube.com/embed/tW9IY48x1bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
     <div class="botones">
@@ -259,95 +215,73 @@ var bitacoraPreActividad = `
     el calentamiento:</p>
     </div>
 
-<div class="escalaEsfuerzo">
-        <div class="renglonEsfuerzo">
-            <div class="num">0.</div>
-            <label for="0">Reposos</label>
-            <div class="inptBox">
-                <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos">
-            </div>
-        </div>
+    <div class="escalaEsfuerzo">
+    <div class="renglonEsfuerzo">
+        <div class="num">0.</div>
+        <label for="0">Reposos</label>
+        <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos" onchange="modMetricas('esfuerzo2','0 - Reposo')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">1.</div>
-            <label for="1">Muy muy ligero</label>
-            <div class="inptBox">
-                <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">1.</div>
+        <label for="1">Muy muy ligero</label>
+        <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero" onchange="modMetricas('esfuerzo2','1 - Muy muy ligero')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">2.</div>
-            <label for="2">Muy ligero</label>
-            <div class="inptBox">
-                <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">2.</div>
+        <label for="2">Muy ligero</label>
+        <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero" onchange="modMetricas('esfuerzo2','2 - Muy ligero')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">3.</div>
-            <label for="3">Ligero</label>
-            <div class="inptBox">
-                <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">3.</div>
+        <label for="3">Ligero</label>
+        <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero" onchange="modMetricas('esfuerzo2','3 - Ligero')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">4.</div>
-            <label for="4">Algo pesado</label>
-            <div class="inptBox">
-                <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">4.</div>
+        <label for="4">Algo pesado</label>
+        <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado" onchange="modMetricas('esfuerzo2','4 - Algo pesado')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">5.</div>
-            <label for="5">Pesado</label>
-            <div class="inptBox">
-                <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">5.</div>
+        <label for="5">Pesado</label>
+        <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado" onchange="modMetricas('esfuerzo2','5 - Pesado')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">6.</div>
-            <label for="6">Más pesado</label>
-            <div class="inptBox">
-                <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">6.</div>
+        <label for="6">Más pesado</label>
+        <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado" onchange="modMetricas('esfuerzo2','6 - Más pesado')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">7.</div>
-            <label for="7">Muy pesado</label>
-            <div class="inptBox">
-                <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">7.</div>
+        <label for="7">Muy pesado</label>
+        <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado" onchange="modMetricas('esfuerzo2','7 - Muy pesado')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">8.</div>
-            <label for="8">Muy muy pesado</label>
-            <div class="inptBox">
-                <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">8.</div>
+        <label for="8">Muy muy pesado</label>
+        <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado" onchange="modMetricas('esfuerzo2','8 - Muy muy pesado')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">9.</div>
-            <label for="9">Máximo</label>
-            <div class="inptBox">
-                <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo">
-            </div>
-        </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">9.</div>
+        <label for="9">Máximo</label>
+        <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo" onchange="modMetricas('esfuerzo2','9 - Máximo')">
+    </div>
 
-        <div class="renglonEsfuerzo">
-            <div class="num">10.</div>
-            <label for="10">Extremo</label>
-            <div class="inptBox">
-                <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo">
-            </div>
-        </div>
-        
+    <div class="renglonEsfuerzo">
+        <div class="num">10.</div>
+        <label for="10">Extremo</label>
+        <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo" onchange="modMetricas('esfuerzo2','10 - Extremo')">
+    </div>
+    
 </div>
 
 
@@ -355,7 +289,7 @@ var bitacoraPreActividad = `
 
     
 <div class="botones">
-    <div class="boton" onclick="moverseccion(indicacionesTapete)">SIGUIENTE</div>
+    <div class="boton" onclick="moverseccion(indicacionesTapete),comenzarAct()">SIGUIENTE</div>
 </div>
 </div>        
 `;
@@ -366,6 +300,16 @@ var indicacionesTapete = `
 Instrucciones
 </div>
 <h1>INDICACIONES</h1>
+<div class="indicacionesWrapp">
+<ul>
+                <li>Recorrer 3 veces el tapete físico con el patrón descrito en tapete virtual, iniciando con el <strong>pie derecho.</strong> (se recomienda utilizar el boton de <i>"DEMOSTRACIÓN"</i> antes de recorrer el patrón)</strong></li>
+                <li>Una vez recorrido el patrón 3 veces con el <strong>pie derecho</strong> marcar la casilla de <i>"COMPLETADO"</i> y apretar el boton de <i>PIE DE INICIO</i>  para visualizar el mismo patrón iniciado con el pie izquierdo.</li>
+                <li>Recorrer 3 veces el tapete físico con el patrón descrito en el tapete virtual iniciando con el pie izquierdo.</li>
+                <li>Una vez recorrido el patrón 3 veces con el pie izquierdo marcar la casilla de "COMPLETADO"</li>
+                <li>Elegir el siguiente ejercicio mediante el botón correspondiente: <i>"Ejercicio 1, Ejercicio 2 ó Ejercicio 3"</i> y repetir el procedimiento</li>
+                <li>Una vez completados los ejercicios, apretar el botón <i>"FINALIZAR DÍA"</i></li>
+            </ul>
+</div>
 <div class="botones">
     <div class="boton" onclick="moverseccion(tapeteFisico)">SIGUIENTE</div>
 </div>
@@ -373,8 +317,8 @@ Instrucciones
 `;
 
 var tapeteFisico = `
-<div id="semana" class="header">
-Semana 1
+<div class="header">
+<span id="semana">Semana 2</span>
 </div>
 
 <div class="diaCont">
@@ -504,28 +448,51 @@ Semana 1
 
         <div class="inpt">
             <label class="completado" for="complete">COMPLETADO</label>
-            <input type="checkbox" id="complete" value="completado">
+            <input type="checkbox" id="complete" value="completado" onchange="changeCuenta()">
         </div>
     </div>
 
     <div id="ejerciciosMenuCont">
 
-        <div class="btnEjercicio active" onclick="cambiarEjer(E1_1,E1_2,'Ejercicio 1')">Ejercicio 1</div>
-        <div class="btnEjercicio" onclick="cambiarEjer(E1_3,E1_4,'Ejercicio 2')">Ejercicio 2</div>
-        <div class="btnEjercicio" onclick="cambiarEjer(E1_5,E1_6,'Ejercicio 3')">Ejercicio 3</div>
+        <div class="ejercicioCont">
+            <div class="btnEjercicio active" onclick="cambiarEjer(E1_1,E1_2,'Ejercicio 1')">Ejercicio 1</div>
+            <div id='ejerLabel-0-1'>I</div>
+            <div id='ejerLabel-0-0'>D</div>
+        </div>
+        <div class="ejercicioCont">
+            <div class="btnEjercicio" onclick="cambiarEjer(E1_3,E1_4,'Ejercicio 2')">Ejercicio 2</div>
+            <div id='ejerLabel-1-1'>I</div>
+            <div id='ejerLabel-1-0'>D</div>
+        </div>
+        <div class="ejercicioCont">
+            <div class="btnEjercicio" onclick="cambiarEjer(E1_5,E1_6,'Ejercicio 3')">Ejercicio 3</div>
+            <div id='ejerLabel-2-1'>I</div>
+            <div id='ejerLabel-2-0'>D</div>
+        </div>
+        
+        
 
     </div>
 
     <div class="btnFinalizarCont">
-        <div class="btnFinalizar" onclick="moverseccion(bitacoraPost)">FINALIZAR DÍA</div>
+        <div class="btnFinalizar disabled" onclick="moverseccion(bitacoraPost),finalizarAct()">FINALIZAR DÍA</div>
     </div>
 </div>
 </div>
 <div class="pContInstr">
-                <p><strong>Nota:</strong></p>
-                <p>Cada ejercicio se recorre 3 veces, empezando con el <strong>pie derecho</strong> y a continuación 3 veces empezando con el <strong>pie izquierdo</strong></p>
+                <h3><strong>Instrucciones:</strong></h3>
+                <ul>
+                <li>Recorrer 3 veces el tapete físico con el patrón descrito en tapete virtual, iniciando con el <strong>pie derecho.</strong> (se recomienda utilizar el boton de <i>"DEMOSTRACIÓN"</i> antes de recorrer el patrón)</strong></li>
+                <li>Una vez recorrido el patrón 3 veces con el <strong>pie derecho</strong> marcar la casilla de <i>"COMPLETADO"</i> y apretar el botón: <i>"PIE DE INICIO"</i>  para visualizar el mismo patrón iniciado con el <strong>pie izquierdo.</strong></li>
+                <li>Recorrer 3 veces el tapete físico con el patrón descrito en el tapete virtual iniciando con el <strong>pie izquierdo.</strong></li>
+                <li>Una vez recorrido el patrón 3 veces con el <strong>pie izquierdo</strong> marcar la casilla de <i>"COMPLETADO"</i></li>
+                <li>Elegir el siguiente ejercicio mediante el botón correspondiente: <i>"Ejercicio 1, Ejercicio 2 ó Ejercicio 3"</i> y repetir el procedimiento</li>
+                <li>Una vez completados los ejercicios, apretar el botón <i>"FINALIZAR DÍA"</i></li>
+            </ul>
             
             </div>
+
+            
 
 
 `;
@@ -539,73 +506,73 @@ var bitacoraPost = `
             </div>
             
             <div class="escalaEsfuerzo">
-                    <div class="renglonEsfuerzo">
-                        <div class="num">0.</div>
-                        <label for="0">Reposos</label>
-                        <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos">
-                    </div>
+    <div class="renglonEsfuerzo">
+        <div class="num">0.</div>
+        <label for="0">Reposos</label>
+        <input type="radio" id="0" name="escalaEsfuerzo" value="Reposos" onchange="modMetricas('esfuerzo3','0 - Reposo')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">1.</div>
+        <label for="1">Muy muy ligero</label>
+        <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero" onchange="modMetricas('esfuerzo3','1 - Muy muy ligero')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">2.</div>
+        <label for="2">Muy ligero</label>
+        <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero" onchange="modMetricas('esfuerzo3','2 - Muy ligero')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">3.</div>
+        <label for="3">Ligero</label>
+        <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero" onchange="modMetricas('esfuerzo3','3 - Ligero')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">4.</div>
+        <label for="4">Algo pesado</label>
+        <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado" onchange="modMetricas('esfuerzo3','4 - Algo pesado')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">5.</div>
+        <label for="5">Pesado</label>
+        <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado" onchange="modMetricas('esfuerzo3','5 - Pesado')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">6.</div>
+        <label for="6">Más pesado</label>
+        <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado" onchange="modMetricas('esfuerzo3','6 - Más pesado')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">7.</div>
+        <label for="7">Muy pesado</label>
+        <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado" onchange="modMetricas('esfuerzo3','7 - Muy pesado')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">8.</div>
+        <label for="8">Muy muy pesado</label>
+        <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado" onchange="modMetricas('esfuerzo3','8 - Muy muy pesado')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">9.</div>
+        <label for="9">Máximo</label>
+        <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo" onchange="modMetricas('esfuerzo3','9 - Máximo')">
+    </div>
+
+    <div class="renglonEsfuerzo">
+        <div class="num">10.</div>
+        <label for="10">Extremo</label>
+        <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo" onchange="modMetricas('esfuerzo3','10 - Extremo')">
+    </div>
     
-                    <div class="renglonEsfuerzo">
-                        <div class="num">1.</div>
-                        <label for="1">Muy muy ligero</label>
-                        <input type="radio" id="1" name="escalaEsfuerzo" value="Muy muy ligero">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">2.</div>
-                        <label for="2">Muy ligero</label>
-                        <input type="radio" id="2" name="escalaEsfuerzo" value="Muy ligero">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">3.</div>
-                        <label for="3">Ligero</label>
-                        <input type="radio" id="3" name="escalaEsfuerzo" value="Ligero">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">4.</div>
-                        <label for="4">Algo pesado</label>
-                        <input type="radio" id="4" name="escalaEsfuerzo" value="Algo pesado">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">5.</div>
-                        <label for="5">Pesado</label>
-                        <input type="radio" id="5" name="escalaEsfuerzo" value="Pesado">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">6.</div>
-                        <label for="6">Más pesado</label>
-                        <input type="radio" id="6" name="escalaEsfuerzo" value="Más pesado">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">7.</div>
-                        <label for="7">Muy pesado</label>
-                        <input type="radio" id="7" name="escalaEsfuerzo" value="Muy pesado">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">8.</div>
-                        <label for="8">Muy muy pesado</label>
-                        <input type="radio" id="8" name="escalaEsfuerzo" value="Muy muy pesado">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">9.</div>
-                        <label for="9">Máximo</label>
-                        <input type="radio" id="9" name="escalaEsfuerzo" value="Máximo">
-                    </div>
-    
-                    <div class="renglonEsfuerzo">
-                        <div class="num">10.</div>
-                        <label for="10">Extremo</label>
-                        <input type="radio" id="10" name="escalaEsfuerzo" value="Extremo">
-                    </div>
-                    
-            </div>
+</div>
     
             <div class="pCont">
                 <p>Escala de medición del estado de ánimo del
@@ -619,35 +586,35 @@ var bitacoraPost = `
                         <label class="cara1" for="cara1">
                             <div class="cara cara1"></div>
                         </label>
-                        <input type="radio" id="cara1" name="caras" value="1">
+                        <input type="radio" id="cara1" name="caras" value="1" onchange="modMetricas('estadoDeAnimo',['cara1','1/5','Muy Triste'])">
                     </div>
     
                     <div class="caraBtnCont">
                         <label for="cara2">
                             <div class="cara cara2"></div>
                         </label>
-                        <input type="radio" id="cara2" name="caras" value="1">
+                        <input type="radio" id="cara2" name="caras" value="1" onchange="modMetricas('estadoDeAnimo',['cara2','2/5','Triste'])">
                     </div>
     
                     <div class="caraBtnCont">
                         <label for="cara3">
                             <div class="cara cara3"></div>
                         </label>
-                        <input type="radio" id="cara3" name="caras" value="1">
+                        <input type="radio" id="cara3" name="caras" value="1" onchange="modMetricas('estadoDeAnimo',['cara3','3/5','Neutral'])">
                     </div>
     
                     <div class="caraBtnCont">
                         <label for="cara4">
                             <div class="cara cara4"></div>
                         </label>
-                        <input type="radio" id="cara4" name="caras" value="1">
+                        <input type="radio" id="cara4" name="caras" value="1" onchange="modMetricas('estadoDeAnimo',['cara4','4/5','Feliz'])">
                     </div>
     
                     <div class="caraBtnCont">
                         <label for="cara5">
                             <div class="cara cara5"></div>
                         </label>
-                        <input type="radio" id="cara5" name="caras" value="1">
+                        <input type="radio" id="cara5" name="caras" value="1" onchange="modMetricas('estadoDeAnimo',['cara5','5/5','Muy Feliz'])">
                     </div>
     
                 </div>
@@ -663,13 +630,64 @@ var bitacoraPost = `
             
                 
             <div class="botones">
-                        <div class="boton">FINALIZAR</div>
+                        <div class="boton" onclick="moverseccion(resumen)">FINALIZAR</div>
             </div>
         </div>
+       
     
 `;
 
 var resumen = `
+
+
+<div class="resumen">
+        
+        <div class="resTit">
+
+            <h2>Reporte De actividad</h2>
+            <div class="semanaFechaCont" id="resFecha">
+                <div class="semana">Semana 1</div>
+                <div class="fecha">12/04/2022</div>
+            </div>
+
+        </div>
+        
+
+        <div class="resCont">
+            
+    
+            <div class="resCard" id="resTiempo">
+                <div class="cardTit">Tiempo de actividad</div>
+                <div>-Inicio:</div>
+                <div>-Finalizado:</div>
+                <div>TOTAL:</div>
+            </div>
+    
+            <div class="resCard" id="resEsfuerzo">
+                <div class="cardTit">Escala de esfuerzo</div>
+                <div>-Inicial:</div>
+                <div>-Post Calentamiento:</div>
+                <div>-Post Actividad:</div>
+    
+            </div>
+    
+            <div class="escalaAnimo resCard" id="resAnimo">
+            <div class="cardTit">Escala de Ánimo</div>
+            <div class="cara"></div>
+            <div class="num"></div>
+            <div class="estado"></div>
+            </div>
+        </div>
+
+        <div class="finCont">
+            <div class="finYSubir">
+                Finalizar y Subir
+            </div>
+        </div>
+
+     
+  
+
 
 `;
 
@@ -848,5 +866,4 @@ var tapeteVirtual = `
 
 </div>
 `;
-
 
