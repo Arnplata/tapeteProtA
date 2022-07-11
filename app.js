@@ -3,9 +3,7 @@
 
 const teclas = document.getElementsByClassName("tecla");
 
-var fecha = new Date().toLocaleDateString();
 
-var num = new Date().getDay();
 
 function b(id) {
     let tecla = document.getElementById(`${id}`);
@@ -117,6 +115,13 @@ function cambiarEjer(ejerDerecho,ejerIzquierdo,tipo){
         manejadorInterruptor(ejerDerecho[10])
         titulo.innerHTML= tipo ;
         cambiarBtnDemo(ejerDerecho);
+        ejercicioActual = tipo;
+        pieActual = ejerDerecho[10];
+        setState(tipo,ejerDerecho[10])
+        setEjercicioActualArr();
+        changeCheckBox();
+        selectLabel();
+        selectBtnAct()
     } else {
         
         botonBox.innerHTML= `
@@ -127,6 +132,12 @@ function cambiarEjer(ejerDerecho,ejerIzquierdo,tipo){
         manejadorInterruptor(ejerIzquierdo[10]);
         printEjer(ejerIzquierdo);
         cambiarBtnDemo(ejerIzquierdo);
+        setState(ejercicioActual,ejerIzquierdo[10]);
+        pieActual = ejerIzquierdo[10];
+        console.log(pieActual)
+        setEjercicioActualArr();
+        changeCheckBox();
+        selectLabel();
 
     }    
 
@@ -175,28 +186,28 @@ function limpiarActive(){
      }
 }
 
-function moverseccion(sec){
-    var mainCont = document.getElementById("mainCont")
-
-
-    if (sec == tapeteFisico) {
-        mainCont.innerHTML = sec
-        
-        tapeteLoad();
-        cambiarEjer(E1_1,E1_2,'Ejercicio 1');
-        
-      
-
-        
-    } else {
-        mainCont.innerHTML = sec
-        
-    }
-}
 
 
 function tapeteLoad(){
     
+    var btnEjercicios =`
+        <div class='btnEjercicioCnt'>
+            <div class="btnEjercicio actve" onclick="cambiarEjer(${nuevoDia.e1Der[11]},${nuevoDia.e1Izq[11]},'Ejercicio 1')">Ejercicio 1</div>
+            <div id='ejerLabel-0-1' class='l i slc'>I</div>
+            <div id='ejerLabel-0-0' class='l d'>D</div>
+        </div>
+        <div class='btnEjercicioCnt'>
+            <div class="btnEjercicio" onclick="cambiarEjer(${nuevoDia.e2Der[11]},${nuevoDia.e2Izq[11]},'Ejercicio 2')">Ejercicio 2</div>
+            <div id='ejerLabel-1-1' class='l i'>I</div>
+            <div id='ejerLabel-1-0' class='l d'>D</div>
+        </div>
+        <div class='btnEjercicioCnt'>
+            <div class="btnEjercicio" onclick="cambiarEjer(${nuevoDia.e3Der[11]},${nuevoDia.e3Izq[11]},'Ejercicio 3')">Ejercicio 3</div>
+            <div id='ejerLabel-2-1' class='l i'>I</div>
+            <div id='ejerLabel-2-0' class='l d'>D</div>
+        </div>
+    
+        `;
 
     var dia = (
         num == 0 ? 'Domingo' :
@@ -209,7 +220,108 @@ function tapeteLoad(){
 
     document.getElementById("diaPalabra").innerHTML= dia;
     document.getElementById("diaNumero").innerHTML= fecha;
+    document.getElementById('semana').innerHTML = getPeriodo();
+    document.getElementById("ejerciciosMenuCont").innerHTML= btnEjercicios;
+    cambiarEjer(nuevoDia.e1Der,nuevoDia.e1Izq,'Ejercicio 1')
 
 }
 
 
+const agregarCeroSiEsNecesario = valor => {
+	if (valor < 10) {
+		return "0" + valor;
+	} else {
+		return "" + valor;
+	}
+}
+const milisegundosAMinutosYSegundos = (milisegundos) => {
+	const minutos = parseInt(milisegundos / 1000 / 60);
+	milisegundos -= minutos * 60 * 1000;
+	const segundos = (milisegundos / 1000);
+	return `${agregarCeroSiEsNecesario(minutos)}:${agregarCeroSiEsNecesario(segundos.toFixed(1))}`;
+};
+
+function timeStampToHour(ts){
+    date    = new Date(ts),
+    hours   = date.getHours(),
+    minutes = date.getMinutes();
+
+    let output  = ("0" + hours).slice(-2) + ':' + ("0" + minutes).slice(-2);
+    return output
+}
+
+
+function comenzarAct(){
+    inicio = Date.now();
+    console.log(inicio)
+    tiempo[0]=timeStampToHour(inicio); 
+    return inicio
+}
+
+function finalizarAct(){
+    var final = Date.now();
+    var finalDeco = milisegundosAMinutosYSegundos(final-inicio); 
+    console.log(finalDeco)
+    tiempo[1]=timeStampToHour(final);
+    tiempo[2]=finalDeco
+    return [finalDeco,final]
+}
+
+
+
+function imprimirResumen() {
+    var tiempoRes = document.getElementById('resTiempo');
+    var esfuerzoRes = document.getElementById('resEsfuerzo');
+    var animoRes = document.getElementById('resAnimo');
+    var fechaRes = document.getElementById('resFecha');
+    
+    fechaRes.innerHTML=`
+    <div class="semana">${getPeriodo()}</div>
+    <div class="fecha">${fecha}</div>
+    `
+    tiempoRes.innerHTML=`
+    <div class="cardTit">Tiempo de actividad</div>
+    <div>-Hora de Inicio: ${tiempo[0]}</div>
+    <div>-Hora Final: ${tiempo[1]}</div>
+    <div>TOTAL: ${tiempo[2]}</div>
+    `
+    esfuerzoRes.innerHTML=`
+    <div class="cardTit">Escala de esfuerzo</div>
+    <div>-Inicial: ${esfuerzo[0]}</div>
+    <div>-Post Calentamiento: ${esfuerzo[1]}</div>
+    <div>-Post Actividad: ${esfuerzo[2]}</div>
+    `
+    animoRes.innerHTML=`
+    <div class="cardTit">Escala de Ánimo</div>
+    <div class="cara"></div>
+    <div class="num">${estadoDeAnimo[1]}</div>
+    <div class="estado">${estadoDeAnimo[2]}</div>
+    `
+}
+
+function moverseccion(sec){
+    var mainCont = document.getElementById("mainCont")
+
+
+    if (sec == tapeteFisico) {
+        mainCont.innerHTML = sec
+        
+        setTimeout(tapeteLoad, 10);
+
+        // setTimeout(cambiarEjer(nuevoDia.e1Der,nuevoDia.e1Izq,'Ejercicio 1'), 100);
+        
+        
+        
+        
+      
+
+        
+    } else if(sec == resumen){
+        mainCont.innerHTML = sec;
+        
+        
+        setTimeout(imprimirResumen, 10);
+    }
+
+    mainCont.innerHTML = sec
+}
