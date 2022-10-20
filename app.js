@@ -117,7 +117,6 @@ function cambiarEjer(ejerDerecho,ejerIzquierdo,tipo){
         cambiarBtnDemo(ejerDerecho);
         ejercicioActual = tipo;
         pieActual = ejerDerecho[10];
-        setState(tipo,ejerDerecho[10])
         setEjercicioActualArr();
         changeCheckBox();
         selectLabel();
@@ -132,7 +131,7 @@ function cambiarEjer(ejerDerecho,ejerIzquierdo,tipo){
         manejadorInterruptor(ejerIzquierdo[10]);
         printEjer(ejerIzquierdo);
         cambiarBtnDemo(ejerIzquierdo);
-        setState(ejercicioActual,ejerIzquierdo[10]);
+        //setState(ejercicioActual,ejerIzquierdo[10]);
         pieActual = ejerIzquierdo[10];
         console.log(pieActual)
         setEjercicioActualArr();
